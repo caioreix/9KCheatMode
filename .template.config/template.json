@@ -22,7 +22,11 @@
         ".github/workflows/build_package.yml",
         ".github/workflows/release_package.yml",
         ".template.config",
-        ".nuspec"
+        ".nuspec",
+        ".git",
+        "bin/*",
+        "obj/*",
+        "dist/*"
       ]
     }
   ]
