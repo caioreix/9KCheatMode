@@ -35,7 +35,7 @@
     <PackageReference Include="BepInEx.Core" Version="$(BepInExVersion)" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
 
-    <Reference Include="@(InteropDllFiles)" Condition="'$(InteropDllsFolder)' != ''">
+    <Reference Include="@(InteropDllFiles)" Condition="'$(InteropDllsFolder)' != ''" >
       <HintPath>%(InteropDllFiles.Identity)</HintPath>
       <Private>true</Private>
     </Reference>
