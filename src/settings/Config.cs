@@ -6,7 +6,7 @@ namespace PluginName.Settings;
 public class Config {
     public static void Load(ConfigFile configFile, ManualLogSource logger, string worldType) {
         // Settings setup
-        ENV.Testing.Setup();
+        ENV.Settings.Setup();
         Utils.Settings.Config.Setup(MyPluginInfo.PLUGIN_GUID, configFile);
         Utils.Settings.Config.Load(); // just load this after setup all actions.
 

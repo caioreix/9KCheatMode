@@ -7,7 +7,7 @@ public static class ENV {
     private readonly static string example = "0.🧪 Example";
     public static ConfigElement<float> Example;
 
-    public static class Testing {
+    public static class Settings {
         public static void Setup() {
             Utils.Settings.Config.AddConfigActions(load);
         }
