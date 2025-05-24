@@ -6,7 +6,7 @@
     <AssemblyName>PluginName</AssemblyName>
     <RootNamespace>PluginName</RootNamespace>
     <SolutionName>PluginName</SolutionName>
-    <Description>My first plugin</Description>
+    <Description>PluginName</Description>
     <Version>0.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -15,15 +15,14 @@
     <BepInExVersion>6.0.0-be.733</BepInExVersion>
   </PropertyGroup>
 
-  <Target Name="Copy pack to dist" AfterTargets="Pack" >
-    <Copy SourceFiles="$(OutDir)..\$(PackageId).$(Version).nupkg" DestinationFolder=".\dist" />
+  <Target Name="Copy to Dist" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="./dist" />
   </Target>
 
   <Import Project="Config.xml" Condition="Exists('Config.xml')" />
   <Target Name="CopyDLLs" AfterTargets="AfterBuild" Condition=" '$(Configuration)' == 'Test'">
     <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="$(BuildClientDestinationFolder)" Condition="'$(BuildClientDestinationFolder)' != ''" />
     <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="$(BuildServerDestinationFolder)" Condition="'$(BuildServerDestinationFolder)' != ''" />
-    <Copy SourceFiles="$(TargetDir)$(ProjectName).dll" DestinationFolder="./dist" />
   </Target>
 
   <ItemGroup>
@@ -35,7 +34,7 @@
     <PackageReference Include="BepInEx.Core" Version="$(BepInExVersion)" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
 
-    <Reference Include="@(InteropDllFiles)" Condition="'$(InteropDllsFolder)' != ''" >
+    <Reference Include="@(InteropDllFiles)" Condition="'$(InteropDllsFolder)' != ''">
       <HintPath>%(InteropDllFiles.Identity)</HintPath>
       <Private>true</Private>
     </Reference>

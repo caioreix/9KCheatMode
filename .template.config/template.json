@@ -23,7 +23,7 @@
         ".github/workflows/release_package.yml",
         ".template.config",
         ".nuspec",
-        ".git",
+        ".git/*",
         "bin/*",
         "obj/*",
         "dist/*"
