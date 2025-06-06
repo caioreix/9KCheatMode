@@ -5,7 +5,7 @@ schemaVersion = "0.0.1"
 namespace = "Caioreix"
 name = "9KCheatMode"
 versionNumber = "0.0.0"
-description = "9KCheatMode is a mod designed for the game 9 Kings, providing advanced configuration options and cheat functionalities to enhance and test gameplay. The mod includes features such as automatic castle shooting, UI toggling, invincibility mode, infinite lives, perks activation, and more. It also supports dynamic settings reload and customization through keybinds."
+description = "9KCheatMode is a mod designed for the game 9 Kings, providing advanced configuration options and cheat functionalities to enhance and test gameplay."
 websiteUrl = "https://github.com/caioreix/9KCheatMode"
 containsNsfwContent = false
 
