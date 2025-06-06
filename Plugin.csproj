@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <ProjectName>PluginName</ProjectName>
-    <AssemblyName>PluginName</AssemblyName>
-    <RootNamespace>PluginName</RootNamespace>
-    <SolutionName>PluginName</SolutionName>
-    <Description>PluginName</Description>
+    <ProjectName>_9KCheatMode</ProjectName>
+    <AssemblyName>_9KCheatMode</AssemblyName>
+    <RootNamespace>_9KCheatMode</RootNamespace>
+    <SolutionName>_9KCheatMode</SolutionName>
+    <Description>_9KCheatMode</Description>
     <Version>0.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
@@ -33,6 +33,7 @@
     <PackageReference Include="BepInEx.Unity.IL2CPP" Version="$(BepInExVersion)" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.Core" Version="$(BepInExVersion)" IncludeAssets="compile" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
+    <PackageReference Include="9Kings.Interop" Version="0.7.73" />
 
     <Reference Include="@(InteropDllFiles)" Condition="'$(InteropDllsFolder)' != ''">
       <HintPath>%(InteropDllFiles.Identity)</HintPath>

@@ -3,10 +3,10 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "Caioreix"
-name = "PluginName"
+name = "9KCheatMode"
 versionNumber = "0.0.0"
-description = "PluginName"
-websiteUrl = "https://github.com/caioreix/PluginName"
+description = ""
+websiteUrl = "https://github.com/caioreix/_9KCheatMode"
 containsNsfwContent = false
 
 [package.dependencies]
@@ -23,6 +23,6 @@ target = ""
 
 [publish]
 repository = "https://thunderstore.io"
-communities = []
+communities = ["9-kings"]
 
 [publish.categories]
