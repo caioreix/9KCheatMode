@@ -6,7 +6,7 @@
     <AssemblyName>_9KCheatMode</AssemblyName>
     <RootNamespace>_9KCheatMode</RootNamespace>
     <SolutionName>_9KCheatMode</SolutionName>
-    <Description>_9KCheatMode</Description>
+    <Description>9KCheatMode is a mod designed for the game 9 Kings, providing advanced configuration options and cheat functionalities to enhance and test gameplay. The mod includes features such as automatic castle shooting, UI toggling, invincibility mode, infinite lives, perks activation, and more. It also supports dynamic settings reload and customization through keybinds.</Description>
     <Version>0.0.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>

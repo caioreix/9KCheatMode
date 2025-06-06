@@ -6,7 +6,7 @@ namespace = "Caioreix"
 name = "9KCheatMode"
 versionNumber = "0.0.0"
 description = ""
-websiteUrl = "https://github.com/caioreix/_9KCheatMode"
+websiteUrl = "https://github.com/caioreix/9KCheatMode"
 containsNsfwContent = false
 
 [package.dependencies]

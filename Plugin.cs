@@ -1,7 +1,8 @@
 ﻿using BepInEx;
 using BepInEx.Unity.IL2CPP;
-using CheatSystem;
 using HarmonyLib;
+using UnityEngine;
+using Utils.Injection;
 
 namespace _9KCheatMode;
 
@@ -9,11 +10,12 @@ namespace _9KCheatMode;
 
 public class Plugin : BasePlugin {
     public readonly static Harmony Harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
+    private static Behaviors.KeyBinds keyBindsBehaviour;
     public override void Load() {
         Settings.Config.Load(Config, Log, "Client");
 
-        // IL2CPP.Unregister<KeyBindsBehaviour>();
-        // keyBindsBehaviour = AddComponent<KeyBindsBehaviour>();
+        IL2CPP.Unregister<Behaviors.KeyBinds>();
+        keyBindsBehaviour = AddComponent<Behaviors.KeyBinds>();
 
         Utils.Logger.Log.Trace("Patching harmony");
         Harmony.PatchAll();
@@ -26,7 +28,12 @@ public class Plugin : BasePlugin {
 
         Utils.Logger.Log.Trace("Unpatching harmony");
         Harmony.UnpatchSelf();
+
+        GameObject.Destroy(keyBindsBehaviour);
+        IL2CPP.Unregister<Behaviors.KeyBinds>();
+
         Utils.Logger.Log.Info($"Plugin {MyPluginInfo.PLUGIN_GUID} v{MyPluginInfo.PLUGIN_VERSION} unloaded!");
+
         return true;
     }
 }
